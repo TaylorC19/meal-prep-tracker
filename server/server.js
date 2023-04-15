@@ -33,7 +33,10 @@ function setupServer() {
       query: req.body.ingredients,
     };
 
+    //below is test purposes
     // const nutritionInfo = await axios.post('https://trackapi.nutritionix.com/v2/natural/nutrients', ingredients, {headers: apiHeader});
+    // res.send(nutritionInfo.data);
+
     const nutritionInfo = await nutrition(ingredients, apiHeader);
 
     res.send(nutritionInfo);
